@@ -3,6 +3,9 @@
 @baseColor2: #f3f3f3; /* triangle color,light grey */
 @textColor1: #231f20; /*dark almost black text*/
 @textColor2: #93664b; /* selected brownish color*/
+@loginColor1: #221f20; /*background for login pop up*/
+@loginColor2: #353233; /*input background*/
+@loginColor3: #757172; /*input border*/
 
 @maxContainer: 960px; /* adding different sizes for use in media queries etc */
 @mid2Container: 720px;
@@ -43,24 +46,24 @@ body {
 	.text1 {
 		padding-top: 2px;
 		font-size: 12px;
-		float: left;
 		color: @textColor1;
 		&:hover, &:active { color:@textColor2; } 
 	}
 	.text2 {
 		padding-top: 2px;
 		font-size: 11px;
-		float: left;
 		color: @textColor1;
+		&:hover, &:active { color:@textColor2; } 
 	}
 	.text3 {
 		padding: 2px 8px 0 8px;
 		font-size: 11px;
-		float: left;
 		color: @textColor2;
 	}
-	.bars {
+	.bars,.text1,.text2,.text3 {
 		float: left;
+	}
+	.bars {
 		padding: 0 9px;
 	}
 	#rightSection {
@@ -68,6 +71,34 @@ body {
 	}
 	#headerCart {
 		margin-top: -2px;
+	}
+	#headerSearchIcon {
+		display: none;
+	}
+	#loginDiv {
+		position: absolute;
+		width: 150px;
+		height:200px;
+		top: 32px;
+		left: 15px;
+		z-index: 999;
+		#loginArrow {
+			margin-left: 12px;
+			display: block;
+		}
+		#loginContent {
+			background-color: @loginColor1;
+			padding-top: 10px;
+			.loginInput {
+				display: block;
+				width: 136px;
+				height: 20px;
+				margin: 0 auto;
+				background-color: @loginColor2;
+				border: 1px solid @loginColor3;
+				margin-bottom: 10px;
+			}
+		}
 	}
 }
 .contentWrapper1,.contentWrapper2 {
@@ -89,12 +120,13 @@ body {
 	.contentWrapper2 { width:@maxContainer; }
 	#middleSection { padding-top: 65px; height: 100px; }
 	#rightSection { height: 100px; padding-top: 15px}
-	#headerSearchIcon { position: absolute; right: 15px; bottom: 15px; }
+	#headerSearchIcon { position: absolute; right: 15px; bottom: 15px; display: block}
 }	
 /* tablet to landscape and desktop */
 @media (min-width: (@mid2Container + 48)) and (max-width: (@maxContainer - 1)) {
 	.contentWrapper1 { width:@mid2Container - @tileGutterSize; }
 	.contentWrapper2 { width:@mid2Container; }
+	#rightSection { padding-left: 55px; }
 }
 /* Landscape phone to portrait tablet */
 @media  (min-width: @mid1Container) and (max-width: (@mid2Container + 47)) {
