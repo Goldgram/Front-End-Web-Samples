@@ -1,7 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 @baseColor1: #dddddd; /* base background color,medium grey */
 @baseColor2: #f3f3f3; /* triangle color,light grey */
-@minWidth: 320px;
+
+@maxContainer: 960px; /* adding different sizes for use in media queries etc */
+@mid2Container: 720px;
+@mid1Container: 480px;
+@minContainer: 320px;
+
+@tileGutterSize: 20px; /* tile gutter size */
+
 
 /*base style / additional resets*/
 body { 
@@ -10,40 +17,50 @@ body {
 
 /*index style*/
 #triangleBackground {
+	padding-top: 10px;
 	width: 100%;
-	min-width: @minWidth;
+	min-width: @minContainer	;
 	height: 100%;
-	background:url(mainbg.png) @baseColor1;
+	background:url(../images/mainbg.png) @baseColor1;
 	background-position: left top;
 	background-size:55% auto;
 	background-repeat:no-repeat;
-	padding-top: 10px;
 }
 #header {
 	width: 100%;
 	background-color: @baseColor2;
 	margin-bottom: 10px;
 }
-.contentWrapper1 {
+.contentWrapper1,.contentWrapper2 {
 	margin: 0 auto;
 }
-
-
+#mainLogo {
+	padding: 7px 0;
+}
+.tileItem {
+	width: 240px;
+	height: 240px;
+	padding: @tileGutterSize / 2;
+}
 
 
 /* desktop plus */
-@media (min-width:960px) {
-	.contentWrapper1 { width:940px; }
-}
+@media (min-width:@maxContainer) {
+	.contentWrapper1 { width:@maxContainer - @tileGutterSize; }
+	.contentWrapper2 { width:@maxContainer; }
+}	
 /* tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 959px) {
-	.contentWrapper1 { width:700px; }
+@media (min-width: (@mid2Container + 48)) and (max-width: (@maxContainer - 1)) {
+	.contentWrapper1 { width:@mid2Container - @tileGutterSize; }
+	.contentWrapper2 { width:@mid2Container; }
 }
 /* Landscape phone to portrait tablet */
-@media  (min-width: 480px) and (max-width: 767px) {
-	.contentWrapper1 { width:460px; }
+@media  (min-width: @mid1Container) and (max-width: (@mid2Container + 47)) {
+	.contentWrapper1 { width:@mid1Container - @tileGutterSize; }
+	.contentWrapper2 { width:@mid1Container; }
 }
 /* portrait phone and lower */
-@media (max-width: 479px) {
-	.contentWrapper1 { width:300px; }
+@media (max-width: (@mid1Container - 1)) {
+	.contentWrapper1 { width:@minContainer - @tileGutterSize; }
+	.contentWrapper2 { width:@minContainer; }
 }

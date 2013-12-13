@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link media="all" type="text/css" href="//normalize-css.googlecode.com/svn/trunk/normalize.css"/>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-	<script type="text/javascript" src="resources/js/less.js"></script>
 	<link rel="stylesheet/less" type="text/css" href="resources/less/main.less"/>
+	<script type="text/javascript" src="resources/js/less.js"></script>
 	<!--[if lte IE 8]>
     <link rel="stylesheet/less" type="text/css" href="resources/less/oldie.less">
   <![endif]-->
@@ -16,13 +16,19 @@
 		<div id="header">
 			<div class="contentWrapper1">
 				<div class="row">
-				  <div class="col-md-3 col-sm-3">LOGO</div>
-				  <div class="col-md-5 col-sm-5">longword | longword | longword | longword | longword | longword | longword</div>
+				  <div class="col-md-3 col-sm-4"><img id="mainLogo" src="resources/images/mainlogo.png" alt="main logo"></div>
+				  <div class="col-md-5 col-sm-4">longword | longword | longword | longword | longword | longword | longword</div>
 				  <div class="col-md-4 col-sm-4">longword | longword | longword | longword | longword | longword | longword</div>
 				</div>
 			</div>
 		</div>
 		<div class="contentWrapper2">
+			<div class="js-masonry" data-masonry-options='{ "columnWidth": 240, "itemSelector": ".tileItem" }'>
+				<div class="tileItem"><img class="img-responsive" src="resources/images/content01.png"></div>
+				<div class="tileItem"><img class="img-responsive" src="resources/images/content01.png"></div>
+				<div class="tileItem"><img class="img-responsive" src="resources/images/content01.png"></div>
+				<div class="tileItem"><img class="img-responsive" src="resources/images/content01.png"></div>
+			</div>
 		</div>
 
 	</div>
