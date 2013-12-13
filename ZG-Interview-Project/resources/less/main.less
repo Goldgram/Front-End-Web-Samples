@@ -1,0 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@baseColor1: #dddddd; /* base background color,medium grey */
+@baseColor2: #f3f3f3; /* triangle color,light grey */
+@minWidth: 320px;
+
+/*base style / additional resets*/
+body { 
+	font-family: 'Lato', arial, sans-serif; 
+}
+
+/*index style*/
+#triangleBackground {
+	width: 100%;
+	min-width: @minWidth;
+	height: 100%;
+	background:url(mainbg.png) @baseColor1;
+	background-position: left top;
+	background-size:55% auto;
+	background-repeat:no-repeat;
+	padding-top: 10px;
+}
+#header {
+	width: 100%;
+	background-color: @baseColor2;
+	margin-bottom: 10px;
+}
+.contentWrapper1 {
+	margin: 0 auto;
+}
+
+
+
+
+/* desktop plus */
+@media (min-width:960px) {
+	.contentWrapper1 { width:940px; }
+}
+/* tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 959px) {
+	.contentWrapper1 { width:700px; }
+}
+/* Landscape phone to portrait tablet */
+@media  (min-width: 480px) and (max-width: 767px) {
+	.contentWrapper1 { width:460px; }
+}
+/* portrait phone and lower */
+@media (max-width: 479px) {
+	.contentWrapper1 { width:300px; }
+}
