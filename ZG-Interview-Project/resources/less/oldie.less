@@ -2,10 +2,14 @@
 @baseColor1: #dddddd; /* base background color,medium grey */
 @baseColor2: #f3f3f3; /* triangle color,light grey */
 @textColor1: #231f20; /*dark almost black text*/
-@textColor2: #93664b; /* selected brownish color*/
+@textColor2: #93664b; /* selected brownish color */
 @loginColor1: #221f20; /*background for login pop up*/
 @loginColor2: #353233; /*input background*/
-@loginColor3: #757172; /*input border*/
+@loginColor3: #888485; /*input border*/
+@loginColor4: #93674c; /*and login button background*/
+@loginColor5: #444142; /*login hr border bottom*/
+@infoCartColor: #b3b3b3; /*info cart color*/
+@footerHrColor: #93674c; /*footer horizontal rule color */
 
 @maxContainer: 960px; /* adding different sizes for use in media queries etc */
 @mid2Container: 720px;
@@ -14,9 +18,14 @@
 
 @tileGutterSize: 20px; /* tile gutter size */
 
+/* <ie9 style */
 .contentWrapper1 { width:@maxContainer - @tileGutterSize; }
 .contentWrapper2 { width:@maxContainer; }
 #middleSection { padding-top: 65px; height: 100px; }
 #rightSection { height: 100px; padding-top: 15px}
-#headerSearchIcon { position: absolute; right: 15px; bottom: 15px; display: block}
+#headerSearchIcon { position: absolute; right: 15px; top: 64px; }
 #loginDiv { top: 32px; left: 15px; }
+
+/* backup for non bootstrap support*/
+#header .contentWrapper1 .row .col-md-4 { width: 33%;float: left; }
+#footer .col-md-3 { width: 25%;float: left; }
