@@ -25,7 +25,7 @@
 					  <p class="text1 cursor">JUNIOR</p>
 					  <div class="clear"></div>
 				  </div>
-				  <div id="rightSection" class="col-md-4 col-sm-6">
+				  <div id="rightSection" class="col-md-4 col-sm-6 posRel">
 				  	<p id="toggleLogin" class="text2 cursor">LOGIN</p><span class="bars">|</span>
 				  	<div id="loginDiv">
 				  		<img id="loginArrow" src="resources/images/loginarrow.png" alt="arrow">
@@ -41,8 +41,7 @@
 					  <p class="text2 cursor">ENGLISH</p><span class="bars">|</span>
 					  <p class="text2 cursor">CART</p>
 					  <p class="text3">3 ITEMS</p>
-					  <!-- <img  src="resources/images/cart.png" alt="cart"> -->
-					  <span id="headerCart" class="glyphicon glyphicon-shopping-cart"></span>
+					  <span id="headerCart" class="glyphicon glyphicon-shopping-cart flipHorizontal"></span>
 					  <img id="headerSearchIcon" class="cursor" src="resources/images/searchicon.png" alt="cart">
 					  <div class="clear"></div>
 				  </div>
@@ -69,11 +68,23 @@
 					</div>
 				</div>
 				<div class="tileItem"><img class="img-responsive" src="resources/images/content01.png"></div>
-				<div class="tileItem"><img class="img-responsive" src="resources/images/content01.png"></div>
+				<div class="tileItem">
+					<div class="posRel">
+						<img id="tileBackgroundImage" class="img-responsive" src="resources/images/content01.png">
+						<div id="itemInfoDiv">
+							<div class="posRel">
+								<span id="itemInfoHeart" class="glyphicon glyphicon-heart itemInfoIcon"></span>
+								<p class="text6">POLICE JACKET</p>
+								<p class="text6">&#8364; 35,000.00</p>
+								<span id="itemInfoCart" class="glyphicon glyphicon-shopping-cart itemInfoIcon flipHorizontal"></span>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="tileItem"><img class="img-responsive" src="resources/images/content01.png"></div>
 				<div class="tileItem"><img class="img-responsive" src="resources/images/content01.png"></div>
 				<div class="tileItem">
-					<div id="viewColllectionDiv" class="tileWithContent cursor">
+					<div class="tileWithContent cursor posRel">
 						<p class="text5">VIEW THE COLLECTION</p>
 						<img id="viewColllectionArrow" src="resources/images/tilearrow.png" alt="View Collection Arrow">
 					</div>

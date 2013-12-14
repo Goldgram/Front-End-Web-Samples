@@ -8,7 +8,7 @@
 @loginColor3: #888485; /*input border*/
 @loginColor4: #93674c; /*and login button background*/
 @loginColor5: #444142; /*login hr border bottom*/
-
+@infoCartColor: #b3b3b3;
 
 @maxContainer: 960px; /* adding different sizes for use in media queries etc */
 @mid2Container: 720px;
@@ -48,6 +48,17 @@ a:hover,a:focus,a:active {
 .cursor {
 	cursor: pointer;
 }
+.posRel {
+	position: relative;
+}
+.flipHorizontal {
+	-moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
 
 /*general page style*/
 #triangleBackground {
@@ -83,13 +94,19 @@ a:hover,a:focus,a:active {
 	margin-bottom:5px;
 	cursor: pointer;
 }
+.text4:hover {
+	text-decoration: underline;
+}
 .text5 {
 	font-size: 30px;
 	line-height: 36px;
 	color: white;
 }
-.text4:hover {
-	text-decoration: underline;
+.text6 {
+	font-size: 14px;
+	line-height: 16px;
+	color: white;
+	text-align: center;
 }
 .bars,.text1,.text2,.text3 {
 	float: left;
@@ -113,17 +130,9 @@ a:hover,a:focus,a:active {
 	#middleSection,#rightSection {
 		padding-bottom: 10px;
 	}
-	#rightSection {
-		position: relative;
-	}
 	#headerCart {
+		color: @textColor1;
 		font-size:12px;
-	  -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
 	}
 	#headerSearchIcon {
 		display: none;
@@ -201,13 +210,37 @@ a:hover,a:focus,a:active {
 	height: 100%;
 	padding: 15px;
 }
-#viewColllectionDiv {
-	position: relative;
-}
+
 #viewColllectionArrow {
 	position: absolute;
 	right: 10px;
 	bottom: 20px;
+}
+#tileBackgroundImage {
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+#itemInfoDiv {
+	background-color: @textColor1;
+	width: 100%;
+	padding: 10px 0;
+	position: absolute;
+	top: 90px;
+	left: 0;
+}
+.itemInfoIcon {
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+	font-size: 12px;
+}
+#itemInfoHeart {
+	color: @loginColor4;
+	left: 8px;
+}
+#itemInfoCart {
+	right: 8px;
+	color: @infoCartColor;
 }
 
 
@@ -244,5 +277,30 @@ a:hover,a:focus,a:active {
 	.text1 { font-size: 14px; }
 	.text4 { font-size: 16px; margin-bottom:9px; }
 	.text5 { font-size: 40px; line-height: 46px; }
+	.text6 {
+		font-size: 17px;
+		line-height: 19px;
+	}
 	#viewColllectionArrow { width: 24px; }
+
+#itemInfoDiv {
+	padding: 15px 0;
+	top: 110px;
 }
+.itemInfoIcon {
+	margin-top: -8px;
+	font-size: 16px;
+}
+#itemInfoHeart {
+	left: 12px;
+}
+#itemInfoCart {
+	right: 12px;
+}
+
+
+}
+
+
+
+
