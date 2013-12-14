@@ -9,6 +9,7 @@
 @loginColor4: #93674c; /*and login button background*/
 @loginColor5: #444142; /*login hr border bottom*/
 
+
 @maxContainer: 960px; /* adding different sizes for use in media queries etc */
 @mid2Container: 720px;
 @mid1Container: 480px;
@@ -75,6 +76,20 @@ a:hover,a:focus,a:active {
 	padding: 2px 8px 0 8px;
 	font-size: 11px;
 	color: @textColor2;
+}
+.text4 {
+	font-size: 12px;
+	color: white;
+	margin-bottom:5px;
+	cursor: pointer;
+}
+.text5 {
+	font-size: 30px;
+	line-height: 36px;
+	color: white;
+}
+.text4:hover {
+	text-decoration: underline;
 }
 .bars,.text1,.text2,.text3 {
 	float: left;
@@ -169,12 +184,30 @@ a:hover,a:focus,a:active {
 
 /* page content */
 #homeAndCollection {
-	padding-left: 10px;
+	padding: 0 10px;
 }
 .tileItem {
 	width: 240px;
 	height: 240px;
 	padding: @tileGutterSize / 2;
+}
+.tileItem.tileItem2 {
+	width: 480px;
+	height: 480px;
+}
+.tileWithContent {
+	background-color: @textColor1;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+}
+#viewColllectionDiv {
+	position: relative;
+}
+#viewColllectionArrow {
+	position: absolute;
+	right: 10px;
+	bottom: 20px;
 }
 
 
@@ -199,10 +232,17 @@ a:hover,a:focus,a:active {
 	.contentWrapper1 { width:@mid1Container - @tileGutterSize; }
 	.contentWrapper2 { width:@mid1Container; }
 	#loginDiv { top: 17px; left: 15px; }
+	#homeAndCollection { float: right; }
 }
 /* portrait phone and lower */
 @media (max-width: (@mid1Container - 1)) {
 	.contentWrapper1 { width:@minContainer - @tileGutterSize; }
 	.contentWrapper2 { width:@minContainer; }
 	#loginDiv { top: 17px; left: 15px; }
+	#homeAndCollection { float: right; }
+	.tileItem,.tileItem.tileItem2 { width: 320px; height: 320px; }
+	.text1 { font-size: 14px; }
+	.text4 { font-size: 16px; margin-bottom:9px; }
+	.text5 { font-size: 40px; line-height: 46px; }
+	#viewColllectionArrow { width: 24px; }
 }
