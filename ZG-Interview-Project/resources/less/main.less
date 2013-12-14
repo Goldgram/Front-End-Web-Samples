@@ -8,7 +8,8 @@
 @loginColor3: #888485; /*input border*/
 @loginColor4: #93674c; /*and login button background*/
 @loginColor5: #444142; /*login hr border bottom*/
-@infoCartColor: #b3b3b3;
+@infoCartColor: #b3b3b3; /*info cart color*/
+@footerHrColor: #93674c; /*footer horizontal rule color */
 
 @maxContainer: 960px; /* adding different sizes for use in media queries etc */
 @mid2Container: 720px;
@@ -16,7 +17,6 @@
 @minContainer: 320px;
 
 @tileGutterSize: 20px; /* tile gutter size */
-
 
 /*base style / additional resets*/
 * {
@@ -59,12 +59,31 @@ a:hover,a:focus,a:active {
   filter: FlipH;
   -ms-filter: "FlipH";
 }
+.marginTop10 {
+	margin-top: 10px;
+}
 
 /*general page style*/
+::-webkit-input-placeholder {
+   color: @loginColor3;
+}
+:-moz-placeholder {
+   color: @loginColor3;  
+}
+::-moz-placeholder {
+   color: @loginColor3;  
+}
+:-ms-input-placeholder {  
+   color: @loginColor3;  
+}
+/*input[type=text]:focus {
+  box-shadow: 0 0 5px rgba(255, 0, 0, 1);
+  border: 1px solid rgba(255, 0, 0, 1);
+}*/
 #triangleBackground {
 	padding-top: 10px;
 	width: 100%;
-	min-width: @minContainer	;
+	min-width: @minContainer;
 	height: 100%;
 	background:url(../images/mainbg.png) @baseColor1;
 	background-position: left top;
@@ -134,9 +153,6 @@ a:hover,a:focus,a:active {
 		color: @textColor1;
 		font-size:12px;
 	}
-	#headerSearchIcon {
-		display: none;
-	}
 	#loginDiv {
 		display: none;
 		position: absolute;
@@ -153,12 +169,12 @@ a:hover,a:focus,a:active {
 			.loginInput {
 				display: block;
 				width: 136px;
-				height: 20px;
+				height: 21px;
 				margin: 0 auto 10px auto;
 				background-color: @loginColor2;
 				border: 1px solid @loginColor3;
 				color: @loginColor3;
-				font-size: 10px;
+				font-size: 11px;
 				padding: 1px 6px;
 			}
 			#formSubmit {
@@ -195,6 +211,9 @@ a:hover,a:focus,a:active {
 #homeAndCollection {
 	padding: 0 10px;
 }
+/*#masonryDiv {
+	padding-bottom: 20px;
+}*/
 .tileItem {
 	width: 240px;
 	height: 240px;
@@ -243,6 +262,81 @@ a:hover,a:focus,a:active {
 	color: @infoCartColor;
 }
 
+/*footer*/
+.footerContent {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	.socialButtons {
+		cursor: pointer;
+		display:block;
+		margin-bottom: 5px;
+	}
+	#newsletterInput {
+		width: 162px;
+		height: 20px;
+		border: 1px solid @textColor1;
+		position: relative;
+		input{
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin:0;
+			padding:1px 5px;
+			width: 140px;
+			height: 18px;
+			border: none;
+			background-color: @baseColor1;
+			color: @textColor1;
+			font-size: 11px;
+		}
+		#newsletterSubmit {
+			position: absolute;
+	    margin: 0;
+			padding: 0;
+			width: 19px;
+			height: 100%;;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+		}
+	}
+}
+.footerContentPartLeft {
+	width: 55%;
+	float: left;
+}
+.footerContentPartRight {
+	width: 45%;
+	float: left;
+}
+.footerHeader {
+	margin-bottom: 6px;
+	font-size: 14px;
+}
+.footerText {
+	font-size: 12px;
+	line-height: 16px;
+}
+#footerPrivacy {
+	padding-top: 5px;
+	font-size: 10px;
+	text-decoration: underline;
+	font-style:italic
+}
+.footerHr {
+	border-top: 1px solid	@footerHrColor;
+	margin:0;
+}
+#footerHr1 {
+	margin: 40px 0 10px 0; 
+}
+#footerHr2 {
+	margin: 10px 0 20px 0; 
+}
+#companyText {
+	text-align: center;
+	padding-bottom: 20px;
+}
 
 /* desktop plus */
 @media (min-width: (@maxContainer + 32)) {
@@ -250,7 +344,7 @@ a:hover,a:focus,a:active {
 	.contentWrapper2 { width:@maxContainer; }
 	#middleSection { padding-top: 65px; height: 100px; }
 	#rightSection { height: 100px; padding-top: 15px}
-	#headerSearchIcon { position: absolute; right: 15px; bottom: 15px; display: block}
+	#headerSearchIcon { font-size:16px;position: absolute; right: 15px; top: 64px; display: block}
 	#loginDiv { top: 32px; left: 15px; }
 }
 /* tablet to landscape and desktop */
@@ -259,6 +353,8 @@ a:hover,a:focus,a:active {
 	.contentWrapper2 { width:@mid2Container; }
 	#rightSection { padding-left: 55px; }
 	#loginDiv { top: 17px; left: 55px; }
+	#headerSearchIcon { display: none; }
+	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 }
 /* Landscape phone to portrait tablet */
 @media  (min-width: @mid1Container) and (max-width: (@mid2Container + 47)) {
@@ -266,6 +362,9 @@ a:hover,a:focus,a:active {
 	.contentWrapper2 { width:@mid1Container; }
 	#loginDiv { top: 17px; left: 15px; }
 	#homeAndCollection { float: right; }
+	#headerSearchIcon { display: none; }
+	#clearOnSmall {  clear:both; }
+	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 }
 /* portrait phone and lower */
 @media (max-width: (@mid1Container - 1)) {
@@ -273,32 +372,25 @@ a:hover,a:focus,a:active {
 	.contentWrapper2 { width:@minContainer; }
 	#loginDiv { top: 17px; left: 15px; }
 	#homeAndCollection { float: right; }
+	#headerSearchIcon { display: none; }
 	.tileItem,.tileItem.tileItem2 { width: 320px; height: 320px; }
 	.text1 { font-size: 14px; }
 	.text4 { font-size: 16px; margin-bottom:9px; }
 	.text5 { font-size: 40px; line-height: 46px; }
-	.text6 {
-		font-size: 17px;
-		line-height: 19px;
-	}
+	.text6 { font-size: 17px; line-height: 19px; }
 	#viewColllectionArrow { width: 24px; }
-
-#itemInfoDiv {
-	padding: 15px 0;
-	top: 110px;
-}
-.itemInfoIcon {
-	margin-top: -8px;
-	font-size: 16px;
-}
-#itemInfoHeart {
-	left: 12px;
-}
-#itemInfoCart {
-	right: 12px;
-}
-
-
+	#itemInfoDiv { padding: 15px 0; top: 110px; }
+	.itemInfoIcon { margin-top: -8px; font-size: 16px; }
+	#itemInfoHeart { left: 12px; }
+	#itemInfoCart { right: 12px; }
+	#clearOnSmall {  clear:both; }
+	.footerContentPartLeft { width: 64%; }
+	.footerContentPartRight { width: 36%; }
+	.footerHeader { font-size: 16px; }
+	.footerText { font-size: 14px; line-height: 18px; }
+	#footerPrivacy { font-size: 12px; }
+	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
+	#triangleBackground { background-size:65% auto; }
 }
 
 
