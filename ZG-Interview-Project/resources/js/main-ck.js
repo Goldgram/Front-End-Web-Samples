@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#toggleLogin").click(function(){$("#loginDiv").slideToggle("fast")})});
+$(document).ready(function(){$("#toggleLogin").click(function(){$("#loginDiv").slideToggle("fast")});var e={};e.loginEmail="email";e.loginPassword="password";e.newsletterFormInput="Sign up for newsletter";$(".inputPlaceholders").click(function(){var t=$(this).attr("id");$("#"+t).val()===e[t]&&$("#"+t).val("")})});
