@@ -18,8 +18,28 @@
 
 
 /*base style / additional resets*/
+* {
+	margin:0;
+	padding:0;
+}
 body { 
 	font-family: 'Lato', arial, sans-serif;
+}
+p {
+	margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+a:-webkit-any-link {
+  text-decoration:none !important;
+}
+a:hover,a:focus,a:active {
+  outline:0;
+  text-decoration:none;
 }
 .clear {
 	clear: both;
@@ -28,7 +48,7 @@ body {
 	cursor: pointer;
 }
 
-/*index style*/
+/*general page style*/
 #triangleBackground {
 	padding-top: 10px;
 	width: 100%;
@@ -39,33 +59,44 @@ body {
 	background-size:55% auto;
 	background-repeat:no-repeat;
 }
+.text1 {
+	padding-top: 2px;
+	font-size: 12px;
+	color: @textColor1;
+	&:hover, &:active { color:@textColor2; } 
+}
+.text2 {
+	padding-top: 2px;
+	font-size: 11px;
+	color: @textColor1;
+	&:hover, &:active { color:@textColor2; } 
+}
+.text3 {
+	padding: 2px 8px 0 8px;
+	font-size: 11px;
+	color: @textColor2;
+}
+.bars,.text1,.text2,.text3 {
+	float: left;
+}
+.bars {
+	padding: 0 9px;
+}
+.contentWrapper1,.contentWrapper2 {
+	margin: 0 auto;
+}
+
+/*header style*/
 #header {
 	width: 100%;
 	background-color: @baseColor2;
 	margin-bottom: 10px;
 	color: @textColor1;
-	.text1 {
-		padding-top: 2px;
-		font-size: 12px;
-		color: @textColor1;
-		&:hover, &:active { color:@textColor2; } 
+	#rightSection {
+		
 	}
-	.text2 {
-		padding-top: 2px;
-		font-size: 11px;
-		color: @textColor1;
-		&:hover, &:active { color:@textColor2; } 
-	}
-	.text3 {
-		padding: 2px 8px 0 8px;
-		font-size: 11px;
-		color: @textColor2;
-	}
-	.bars,.text1,.text2,.text3 {
-		float: left;
-	}
-	.bars {
-		padding: 0 9px;
+	#middleSection,#rightSection {
+		padding-bottom: 10px;
 	}
 	#rightSection {
 		position: relative;
@@ -83,6 +114,7 @@ body {
 		display: none;
 	}
 	#loginDiv {
+		display: none;
 		position: absolute;
 		width: 150px;
 		height:200px;
@@ -131,11 +163,13 @@ body {
 		}
 	}
 }
-.contentWrapper1,.contentWrapper2 {
-	margin: 0 auto;
-}
 #mainLogo {
 	padding: 7px 0;
+}
+
+/* page content */
+#homeAndCollection {
+	padding-left: 10px;
 }
 .tileItem {
 	width: 240px;
