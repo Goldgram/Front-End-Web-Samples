@@ -3,13 +3,12 @@
 <head>
 	<title>ZeroGrey Sample</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link media="all" type="text/css" href="//normalize-css.googlecode.com/svn/trunk/normalize.css"/>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-	<link rel="stylesheet/less" type="text/css" href="resources/less/main.less"/>
-	<script type="text/javascript" src="resources/js/less.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="//normalize-css.googlecode.com/svn/trunk/normalize.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" media="all" href="resources/css/main.css"/>
 	<!--[if lte IE 8]>
-    <link rel="stylesheet/less" type="text/css" href="resources/less/oldie.less">
-  <![endif]-->
+		<link rel="stylesheet" type="text/css" media="all" href="resources/css/oldie.css">
+	<![endif]-->
 </head>
 <body>
 	<div id="triangleBackground">
@@ -30,19 +29,20 @@
 				  	<p class="text2 cursor">LOGIN</p><span class="bars">|</span>
 				  	<div id="loginDiv">
 				  		<img id="loginArrow" src="resources/images/loginarrow.png" alt="arrow">
-				  		<div id="loginContent">
-					  		<input id="username" class="loginInput" type="text">
-					  		<input id="email" class="loginInput" type="text">
-				  			<img id="loginButton" src="">
-				  			<hr>
-				  			<p>Forgot your password?</p>
-				  		</div>
+				  		<form id="loginContent">
+					  		<input name="username" class="loginInput" type="text">
+					  		<input name="email" class="loginInput" type="text">
+					  		<input id="formSubmit" type="submit" value="LOGIN">
+				  			<div id="loginHR"></div>
+				  			<p id="forgotPassword">Forgot your password?</p>
+				  		</form>
 				  	</div>
 					  <p class="text2 cursor">REGISTER</p><span class="bars">|</span>
 					  <p class="text2 cursor">ENGLISH</p><span class="bars">|</span>
 					  <p class="text2 cursor">CART</p>
 					  <p class="text3">3 ITEMS</p>
-					  <img id="headerCart" src="resources/images/cart.png" alt="cart">
+					  <!-- <img  src="resources/images/cart.png" alt="cart"> -->
+					  <span id="headerCart" class="glyphicon glyphicon-shopping-cart"></span>
 					  <img id="headerSearchIcon" class="cursor" src="resources/images/searchicon.png" alt="cart">
 					  <div class="clear"></div>
 				  </div>
