@@ -75,10 +75,10 @@
 						<img id="tileBackgroundImage" class="img-responsive" src="resources/images/content01.png">
 						<div id="itemInfoDiv">
 							<div class="posRel">
-								<span id="itemInfoHeart" class="glyphicon glyphicon-heart itemInfoIcon"></span>
+								<span id="itemInfoHeart" class="glyphicon glyphicon-heart itemInfoIcon cursor"></span>
 								<p class="text6">POLICE JACKET</p>
 								<p class="text6">&#8364; 35,000.00</p>
-								<span id="itemInfoCart" class="glyphicon glyphicon-shopping-cart itemInfoIcon flipHorizontal"></span>
+								<span id="itemInfoCart" class="glyphicon glyphicon-shopping-cart itemInfoIcon cursor flipHorizontal"></span>
 							</div>
 						</div>
 					</div>
@@ -128,8 +128,10 @@
 			  <div class="footerContent col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-8 col-xs-12">
 			  	<p class="footerHeader">SUBSCRIBE TO NEWSLETTER</p>
 			  	<div id="newsletterInput">
-				  	<input  type="text" placeholder="Sign up for newsletter">
-				  	<img id="newsletterSubmit" src="resources/images/searcharrow.png" alt="Newsletter Submit">
+			  	<form>
+				  	<input id="newsletterFormInput" type="text" name="newsletter" placeholder="Sign up for newsletter">
+				  	<input type="image" id="newsletterSubmit" src="resources/images/searcharrow.png" alt="Newsletter Submit">
+			  	</form>
 			  	</div>
 			  	<p id="footerPrivacy" class="cursor">Privacy Policy</p>
 			  </div>

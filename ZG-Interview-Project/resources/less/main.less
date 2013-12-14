@@ -103,7 +103,7 @@ a:hover,a:focus,a:active {
 	&:hover, &:active { color:@textColor2; } 
 }
 .text3 {
-	padding: 2px 8px 0 8px;
+	padding: 2px 5px 0 6px;
 	font-size: 11px;
 	color: @textColor2;
 }
@@ -206,6 +206,9 @@ a:hover,a:focus,a:active {
 #mainLogo {
 	padding: 7px 0;
 }
+#headerSearchIcon { 
+	font-size:16px;
+}
 
 /* page content */
 #homeAndCollection {
@@ -276,7 +279,7 @@ a:hover,a:focus,a:active {
 		height: 20px;
 		border: 1px solid @textColor1;
 		position: relative;
-		input{
+		#newsletterFormInput {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -344,16 +347,16 @@ a:hover,a:focus,a:active {
 	.contentWrapper2 { width:@maxContainer; }
 	#middleSection { padding-top: 65px; height: 100px; }
 	#rightSection { height: 100px; padding-top: 15px}
-	#headerSearchIcon { font-size:16px;position: absolute; right: 15px; top: 64px; display: block}
+	#headerSearchIcon { position: absolute; right: 15px; top: 64px; }
 	#loginDiv { top: 32px; left: 15px; }
 }
 /* tablet to landscape and desktop */
 @media (min-width: (@mid2Container + 48)) and (max-width: (@maxContainer + 31)) {
 	.contentWrapper1 { width:@mid2Container - @tileGutterSize; }
 	.contentWrapper2 { width:@mid2Container; }
-	#rightSection { padding-left: 55px; }
-	#loginDiv { top: 17px; left: 55px; }
-	#headerSearchIcon { display: none; }
+	#rightSection { padding-left: 56px; }
+	#loginDiv { top: 17px; left: 56px; }
+	#headerSearchIcon { float: right; padding-top: 10px;}
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 }
 /* Landscape phone to portrait tablet */
@@ -362,8 +365,11 @@ a:hover,a:focus,a:active {
 	.contentWrapper2 { width:@mid1Container; }
 	#loginDiv { top: 17px; left: 15px; }
 	#homeAndCollection { float: right; }
-	#headerSearchIcon { display: none; }
+	#headerSearchIcon { float: right; }
 	#clearOnSmall {  clear:both; }
+	.footerHeader { font-size: 15px; }
+	.footerText { font-size: 13px; line-height: 17px; }
+	#footerPrivacy { font-size: 11px; }
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 }
 /* portrait phone and lower */
