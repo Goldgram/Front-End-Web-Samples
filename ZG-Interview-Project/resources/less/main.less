@@ -353,7 +353,7 @@ input:focus{
 	text-align: center;
 	padding-bottom: 20px;
 }
-/* zoom css*/
+/* custom zoom css*/
 #popUpDivOpaque {
   background-color:black;
   position:fixed;
@@ -368,10 +368,6 @@ input:focus{
 }
 #popUpZoomImage {
 	position: fixed;
-	width:600px;
-  height:600px;
-  margin-left: -300px;
-  margin-top: -300px;
   top:50%;
   left:50%;
   z-index:1000;
@@ -382,17 +378,16 @@ input:focus{
   cursor: move;
 }
 #zoomCancel {
-	width: 40px;
-	height: 40px;
 	position: fixed;
-  margin-left: 320px;
-  margin-top: -360px;
   top:50%;
   left:50%;
   z-index:1000;
   display: none;
   cursor: pointer;
 }
+
+
+
 
 /* desktop plus */
 @media (min-width: (@maxContainer + 32)) {
@@ -406,6 +401,8 @@ input:focus{
 	#newsletterInput { width: 162px; height: 20px; }
 	#newsletterFormInput { width: 140px; height: 18px; font-size: 11px; }
 	#newsletterSubmit { width: 18px; height: 18px; }
+	#popUpZoomImage { width:600px; height:600px; margin-left: -300px; margin-top: -300px; }
+	#zoomCancel { width: 40px; height: 40px; margin-left: 320px; margin-top: -360px; }
 }
 /* tablet to landscape and desktop */
 @media (min-width: (@mid2Container + 48)) and (max-width: (@maxContainer + 31)) {
@@ -419,6 +416,8 @@ input:focus{
 	#newsletterInput { width: 170px; height: 22px; }
 	#newsletterFormInput { width: 148px; height: 20px; font-size: 12px; }
 	#newsletterSubmit { width: 20px; height: 20px; }
+	#popUpZoomImage { width:500px; height:500px; margin-left: -250px; margin-top: -250px; }
+	#zoomCancel { width: 40px; height: 40px; margin-left: 260px; margin-top: -300px; }
 }
 /* Landscape phone to portrait tablet */
 @media  (min-width: @mid1Container) and (max-width: (@mid2Container + 47)) {
@@ -436,6 +435,8 @@ input:focus{
 	#newsletterInput { width: 180px; height: 24px; }
 	#newsletterFormInput { width: 156px; height: 22px; font-size: 13px; }
 	#newsletterSubmit { width: 22px; height: 22px; }
+	#popUpZoomImage { width:400px; height:400px; margin-left: -200px; margin-top: -200px; }
+	#zoomCancel { width: 35px; height: 35px; margin-left: 200px; margin-top: -245px; }
 }
 /* portrait phone and lower */
 @media (max-width: (@mid1Container - 1)) {
@@ -468,6 +469,9 @@ input:focus{
 	#newsletterInput { width: 190px; height: 26px; }
 	#newsletterFormInput { width: 164px; height: 24px; font-size: 14px; }
 	#newsletterSubmit { width: 24px; height: 24px; }
+	.zoomWindowContainer {width: 300px;}
+	#popUpZoomImage { width:300px; height:300px; margin-left: -150px; margin-top: -150px; }
+	#zoomCancel { width: 35px; height: 35px; margin-left: 110px; margin-top: -190px; }
 }
 
 

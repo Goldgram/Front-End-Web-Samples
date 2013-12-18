@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function() {
 	/* show/hide the login div*/
 	$("#toggleLogin").click(function (){
@@ -25,13 +21,7 @@ $(document).ready(function() {
     $(this).css('backgroundPosition', xPercentage+"% "+yPercentage+"%");
   });
 	// show and hide custom zoom
-	$(".showHideCustomZoom").click(function (){
-		$("#popUpDivOpaque").toggle();
-		$("#popUpZoomImage").toggle();
-		$("#zoomCancel").toggle();
+  $(".showHideideCustomZoom").click(function (){
+		$("#popUpDivOpaque,#popUpZoomImage,#zoomCancel").toggle();
   });
-});
-$("#zoomTile01").elevateZoom({
-  zoomType:"inner",
-  cursor: "move"
 });
