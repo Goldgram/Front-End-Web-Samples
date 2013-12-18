@@ -23,8 +23,9 @@
 	margin:0;
 	padding:0;
 }
-body { 
-	font-family: 'Lato', arial, sans-serif;
+body, html {
+  height: 100%;
+  font-family: 'Lato', arial, sans-serif;
 }
 p {
 	margin: 0;
@@ -87,7 +88,7 @@ input:focus{
 	padding-top: 10px;
 	width: 100%;
 	min-width: @minContainer;
-	height: 100%;
+	min-height: 100%;
 	background:url(../images/mainbg.png) @baseColor1;
 	background-position: left top;
 	background-size:55% auto;
@@ -176,6 +177,7 @@ input:focus{
 				margin: 0 auto 10px auto;
 				background-color: @loginColor2;
 				border: 1px solid @loginColor3;
+				border-radius: 0;
 				color: @loginColor3;
 				font-size: 11px;
 				padding: 1px 6px;
@@ -267,6 +269,14 @@ input:focus{
 	right: 8px;
 	color: @infoCartColor;
 }
+#itemInfoHeart:hover {
+	font-size: 16px;
+	left: 6px;
+}
+#itemInfoCart:hover {
+	font-size: 16px;
+	right: 6px;
+}
 
 /*footer*/
 .footerContent {
@@ -278,8 +288,6 @@ input:focus{
 		margin-bottom: 5px;
 	}
 	#newsletterInput {
-		width: 162px;
-		height: 20px;
 		border: 1px solid @textColor1;
 		position: relative;
 		#newsletterFormInput {
@@ -288,19 +296,18 @@ input:focus{
 			left: 0;
 			margin:0;
 			padding:1px 5px;
-			width: 140px;
-			height: 18px;
-			border: none;
+			border-bottom: none;
+			border-left: none;
+			border-top: none;
+			border-right: 1px solid @textColor1;
+			border-radius: 0;
 			background-color: @baseColor1;
 			color: @textColor1;
-			font-size: 11px;
 		}
 		#newsletterSubmit {
 			position: absolute;
 	    margin: 0;
 			padding: 0;
-			width: 19px;
-			height: 100%;;
 			top: 0;
 			right: 0;
 			cursor: pointer;
@@ -352,6 +359,10 @@ input:focus{
 	#rightSection { height: 100px; padding-top: 15px}
 	#headerSearchIcon { position: absolute; right: 15px; top: 64px; }
 	#loginDiv { top: 32px; left: 15px; }
+	.socialButtons { width: 60px }
+	#newsletterInput { width: 162px; height: 20px; }
+	#newsletterFormInput { width: 140px; height: 18px; font-size: 11px; }
+	#newsletterSubmit { width: 18px; height: 18px; }
 }
 /* tablet to landscape and desktop */
 @media (min-width: (@mid2Container + 48)) and (max-width: (@maxContainer + 31)) {
@@ -359,14 +370,19 @@ input:focus{
 	.contentWrapper2 { width:@mid2Container; }
 	#rightSection { padding-left: 56px; }
 	#loginDiv { top: 17px; left: 56px; }
+	.socialButtons { width: 70px }
 	#headerSearchIcon { float: right; padding-top: 10px;}
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
+	#newsletterInput { width: 170px; height: 22px; }
+	#newsletterFormInput { width: 148px; height: 20px; font-size: 12px; }
+	#newsletterSubmit { width: 20px; height: 20px; }
 }
 /* Landscape phone to portrait tablet */
 @media  (min-width: @mid1Container) and (max-width: (@mid2Container + 47)) {
 	.contentWrapper1 { width:@mid1Container - @tileGutterSize; }
 	.contentWrapper2 { width:@mid1Container; }
 	#loginDiv { top: 17px; left: 15px; }
+	.socialButtons { width: 80px }
 	#homeAndCollection { float: right; }
 	#headerSearchIcon { float: right; }
 	#clearOnSmall {  clear:both; }
@@ -374,12 +390,16 @@ input:focus{
 	.footerText { font-size: 13px; line-height: 17px; }
 	#footerPrivacy { font-size: 11px; }
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
+	#newsletterInput { width: 180px; height: 24px; }
+	#newsletterFormInput { width: 156px; height: 22px; font-size: 13px; }
+	#newsletterSubmit { width: 22px; height: 22px; }
 }
 /* portrait phone and lower */
 @media (max-width: (@mid1Container - 1)) {
 	.contentWrapper1 { width:@minContainer - @tileGutterSize; }
 	.contentWrapper2 { width:@minContainer; }
 	#loginDiv { top: 17px; left: 15px; }
+	.socialButtons { width: 100px }
 	#homeAndCollection { float: right; }
 	#headerSearchIcon { display: none; }
 	.tileItem,.tileItem.tileItem2 { width: 320px; height: 320px; }
@@ -392,6 +412,8 @@ input:focus{
 	.itemInfoIcon { margin-top: -8px; font-size: 16px; }
 	#itemInfoHeart { left: 12px; }
 	#itemInfoCart { right: 12px; }
+	#itemInfoHeart:hover { font-size: 20px; left: 10px; margin-top: -10px; }
+	#itemInfoCart:hover { font-size: 20px; right: 10px; margin-top: -10px; }
 	#clearOnSmall {  clear:both; }
 	.footerContentPartLeft { width: 64%; }
 	.footerContentPartRight { width: 36%; }
@@ -400,6 +422,9 @@ input:focus{
 	#footerPrivacy { font-size: 12px; }
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 	#triangleBackground { background-size:65% auto; }
+	#newsletterInput { width: 190px; height: 26px; }
+	#newsletterFormInput { width: 164px; height: 24px; font-size: 14px; }
+	#newsletterSubmit { width: 24px; height: 24px; }
 }
 
 
