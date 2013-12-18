@@ -1,3 +1,7 @@
+
+
+
+
 $(document).ready(function() {
 	/* show/hide the login div*/
 	$("#toggleLogin").click(function (){
@@ -14,4 +18,20 @@ $(document).ready(function() {
 			$("#"+thisID).val("");
 		}
 	});
+  /* custom zoom js */
+	$("#popUpZoomImage").mousemove(function(event) {
+    var xPercentage = parseInt((event.offsetX*100)/$(this).width());
+    var yPercentage = parseInt((event.offsetY*100)/$(this).height());
+    $(this).css('backgroundPosition', xPercentage+"% "+yPercentage+"%");
+  });
+	// show and hide custom zoom
+	$(".showHideCustomZoom").click(function (){
+		$("#popUpDivOpaque").toggle();
+		$("#popUpZoomImage").toggle();
+		$("#zoomCancel").toggle();
+  });
+});
+$("#zoomTile01").elevateZoom({
+  zoomType:"inner",
+  cursor: "move"
 });
