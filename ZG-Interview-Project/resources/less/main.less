@@ -23,9 +23,13 @@
 	margin:0;
 	padding:0;
 }
-body, html {
+html {
+  height: 100%;
+}
+body {
   height: 100%;
   font-family: 'Lato', arial, sans-serif;
+  background-color: @baseColor1;
 }
 p {
 	margin: 0;
@@ -229,6 +233,7 @@ input:focus{
 	width: 240px;
 	height: 240px;
 	padding: @tileGutterSize / 2;
+
 }
 .tileItem.tileItem2 {
 	width: 480px;
@@ -239,6 +244,9 @@ input:focus{
 	width: 100%;
 	height: 100%;
 	padding: 15px;
+}
+.whiteBg {
+	background-color: white;
 }
 
 #viewColllectionArrow {
@@ -273,10 +281,12 @@ input:focus{
 	color: @infoCartColor;
 }
 #itemInfoHeart:hover {
+	margin-top: -7px;
 	font-size: 16px;
 	left: 6px;
 }
 #itemInfoCart:hover {
+	margin-top: -7px;
 	font-size: 16px;
 	right: 6px;
 }
@@ -306,6 +316,7 @@ input:focus{
 			border-radius: 0;
 			background-color: @baseColor1;
 			color: @textColor1;
+			height: 100%;
 		}
 		#newsletterSubmit {
 			position: absolute;
@@ -314,6 +325,7 @@ input:focus{
 			top: 0;
 			right: 0;
 			cursor: pointer;
+			height: 100%;
 		}
 	}
 }
@@ -399,8 +411,8 @@ input:focus{
 	#loginDiv { top: 32px; left: 15px; }
 	.socialButtons { width: 60px }
 	#newsletterInput { width: 162px; height: 20px; }
-	#newsletterFormInput { width: 140px; height: 18px; font-size: 11px; }
-	#newsletterSubmit { width: 18px; height: 18px; }
+	#newsletterFormInput { width: 140px; font-size: 11px; }
+	#newsletterSubmit { width: 18px; }
 	#popUpZoomImage { width:600px; height:600px; margin-left: -300px; margin-top: -300px; }
 	#zoomCancel { width: 40px; height: 40px; margin-left: 320px; margin-top: -360px; }
 }
@@ -414,8 +426,8 @@ input:focus{
 	#headerSearchIcon { float: right; padding-top: 10px;}
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 	#newsletterInput { width: 170px; height: 22px; }
-	#newsletterFormInput { width: 148px; height: 20px; font-size: 12px; }
-	#newsletterSubmit { width: 20px; height: 20px; }
+	#newsletterFormInput { width: 148px; font-size: 12px; }
+	#newsletterSubmit { width: 20px; }
 	#popUpZoomImage { width:500px; height:500px; margin-left: -250px; margin-top: -250px; }
 	#zoomCancel { width: 40px; height: 40px; margin-left: 260px; margin-top: -300px; }
 }
@@ -433,8 +445,8 @@ input:focus{
 	#footerPrivacy { font-size: 11px; }
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 	#newsletterInput { width: 180px; height: 24px; }
-	#newsletterFormInput { width: 156px; height: 22px; font-size: 13px; }
-	#newsletterSubmit { width: 22px; height: 22px; }
+	#newsletterFormInput { width: 156px; font-size: 13px; }
+	#newsletterSubmit { width: 22px; }
 	#popUpZoomImage { width:400px; height:400px; margin-left: -200px; margin-top: -200px; }
 	#zoomCancel { width: 35px; height: 35px; margin-left: 200px; margin-top: -245px; }
 }
@@ -466,9 +478,9 @@ input:focus{
 	#footerPrivacy { font-size: 12px; }
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 	#triangleBackground { background-size:65% auto; }
-	#newsletterInput { width: 190px; height: 26px; }
-	#newsletterFormInput { width: 164px; height: 24px; font-size: 14px; }
-	#newsletterSubmit { width: 24px; height: 24px; }
+	#newsletterInput { width: 192px; height: 26px; }
+	#newsletterFormInput { width: 164px; font-size: 14px; }
+	#newsletterSubmit { width: 24px; }
 	.zoomWindowContainer {width: 300px;}
 	#popUpZoomImage { width:300px; height:300px; margin-left: -150px; margin-top: -150px; }
 	#zoomCancel { width: 35px; height: 35px; margin-left: 110px; margin-top: -190px; }
