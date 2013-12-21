@@ -73,6 +73,9 @@ input:focus{
 .noDisplay {
 	display: none;
 }
+.overflowHidden {
+	overflow: hidden;
+}
 
 /*general page style*/
 ::-webkit-input-placeholder {
@@ -225,9 +228,6 @@ input:focus{
 #homeAndCollection {
 	padding: 0 10px;
 }
-/*#masonryDiv {
-	padding-bottom: 20px;
-}*/
 .tileItem {
 	width: 240px;
 	height: 240px;
@@ -288,6 +288,20 @@ input:focus{
 	margin-top: -7px;
 	font-size: 16px;
 	right: 6px;
+}
+#tilePopUpText {
+	position: absolute;
+	right: -75%;
+	bottom: 20px;
+	background-color: @textColor1;
+	overflow: hidden;
+	width: 75%;
+}
+#tilePopUpText p {
+	padding: 10px;
+	font-size: 34px;
+	line-height: 36px;
+	color: white;
 }
 
 /*footer*/
@@ -484,6 +498,7 @@ input:focus{
 	.zoomWindowContainer {width: 300px;}
 	#popUpZoomImage { width:300px; height:300px; margin-left: -150px; margin-top: -150px; }
 	#zoomCancel { width: 35px; height: 35px; margin-left: 115px; margin-top: -190px; }
+	#tilePopUpText p { font-size: 26px; line-height: 28px; }
 }
 
 

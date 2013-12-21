@@ -24,4 +24,10 @@ $(document).ready(function() {
   $(".showHideideCustomZoom").click(function (){
 		$("#popUpDivOpaque,#popUpZoomImage,#zoomCancel").toggle();
   });
+  // show large image title
+  $(".tileItem2").hover( function() {
+     $("#tilePopUpText").animate({"right":"0"}, { duration: 200 });
+  }, function() {
+    $("#tilePopUpText").animate({"right":"-75%"}, { duration: 200 });
+  });
 });
