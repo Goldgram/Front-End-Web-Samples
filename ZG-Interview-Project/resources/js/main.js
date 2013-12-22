@@ -30,4 +30,13 @@ $(document).ready(function() {
   }, function() {
     $("#tilePopUpText").animate({"right":"-75%"}, { duration: 200 });
   });
+  //hover prce display
+  $(".hoverPrice").mouseenter(function() {
+    $(this).children(":first").addClass("tileBackgroundImage");
+    $(this).children(":first").next().show();
+  })
+  .mouseleave(function() {
+    $(this).children(":first").removeClass("tileBackgroundImage");
+    $(this).children(":first").next().hide();
+  });
 });
