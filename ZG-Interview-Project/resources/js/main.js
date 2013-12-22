@@ -16,9 +16,18 @@ $(document).ready(function() {
 	});
   /* custom zoom js */
 	$("#popUpZoomImage").mousemove(function(event) {
-    var xPercentage = parseInt((event.offsetX*100)/$(this).width());
-    var yPercentage = parseInt((event.offsetY*100)/$(this).height());
-    $(this).css('backgroundPosition', xPercentage+"% "+yPercentage+"%");
+    var xPos,yPos;
+    // Firefox bug fix for offset x and y
+    if(event.offsetX===undefined) {
+      xPos = event.pageX-$(this).offset().left;
+      yPos = event.pageY-$(this).offset().top;
+    } else {
+      xPos = event.offsetX;
+      yPos = event.offsetY;
+    }
+    var xPercentage = parseInt(((xPos*100)/$(this).width()),10);
+    var yPercentage = parseInt(((yPos*100)/$(this).height()),10);
+    $(this).css({"background-position":xPercentage+"% "+yPercentage+"%"});
   });
 	// show and hide custom zoom
   $(".showHideideCustomZoom").click(function (){
