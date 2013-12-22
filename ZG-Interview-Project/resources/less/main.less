@@ -76,6 +76,30 @@ input:focus{
 .overflowHidden {
 	overflow: hidden;
 }
+.rotate90 {
+	-webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /*this needs to be put in the oldie.css filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);*/
+  transform: rotate(90deg);
+}
+.rotate180 {
+	-webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  /*this needs to be put in the oldie.css filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);*/
+  transform: rotate(180deg);
+}
+.rotate270 {
+	-webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  /*this needs to be put in the oldie.css filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);*/
+  transform: rotate(270deg);
+}
 
 /*general page style*/
 ::-webkit-input-placeholder {
@@ -90,10 +114,6 @@ input:focus{
 :-ms-input-placeholder {  
    color: @loginColor3;  
 }
-/*input[type=text]:focus {
-  box-shadow: 0 0 5px rgba(255, 0, 0, 1);
-  border: 1px solid rgba(255, 0, 0, 1);
-}*/
 #triangleBackground {
 	padding-top: 10px;
 	width: 100%;
@@ -241,7 +261,6 @@ input:focus{
 .whiteBg {
 	background-color: white;
 }
-
 #viewColllectionArrow {
 	position: absolute;
 	right: 10px;
@@ -391,10 +410,53 @@ input:focus{
   left:50%;
   z-index:1000;
   display: none;
-  background: url('../images/content01big.png');
-  background-position:0% 0%;
-  background-size:auto;
-  cursor: move;
+	#popUpZoomImageDesktop {
+		width: 100%;
+		height: 100%;
+	  background: url('../images/content01big.png');
+	  background-position:0% 0%;
+	  background-size:auto;
+	  cursor: move;
+	}
+	#popUpZoomImageTouchScreen {
+		width: 100%;
+		height: 100%;
+	  background: url('../images/content01big.png');
+	  background-position:0% 0%;
+	  background-size:auto;
+	  .popUpZoomArrow {
+	  	-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: moz-none;
+			-ms-user-select: none;
+			user-select: none;
+	  }
+	  #popUpZoomRight,#popUpZoomLeft {
+	  	position: absolute;
+	  	top:50%;
+	  	margin-top: -17px;
+	  }
+	  #popUpZoomRight{
+	  	right: 0;
+	  }
+		#popUpZoomLeft {
+			left: 0;
+			display: none;
+		}
+		#popUpZoomUp,#popUpZoomDown {
+			position: absolute;
+	  	left:50%;
+	  	margin-left: -17px;
+		}
+		#popUpZoomUp {
+			top: 0;
+			display: none;
+		}
+		#popUpZoomDown {
+			bottom: 0;
+		}
+	}
 }
 #zoomCancel {
 	position: fixed;
@@ -407,8 +469,10 @@ input:focus{
 
 /* desktop plus */
 @media (min-width: (@maxContainer + 32)) {
+	/*general page style*/
 	.contentWrapper1 { width:@maxContainer - @tileGutterSize; }
 	.contentWrapper2 { width:@maxContainer; }
+	/*header style*/
 	#middleSection { padding-top: 65px; height: 100px; }
 	#rightSection { height: 100px; padding-top: 15px}
 	#headerSearchIcon { position: absolute; right: 15px; top: 64px; }
@@ -416,71 +480,92 @@ input:focus{
 	.loginInput { width: 136px; height: 21px; font-size: 11px; }
 	#formSubmit { width: 136px; font-size: 12px; }
 	#forgotPassword { font-size: 10px; }
+	/*footer*/
 	.socialButtons { width: 60px }
 	#newsletterInput { width: 162px; height: 20px; }
 	#newsletterFormInput { width: 140px; font-size: 11px; }
 	#newsletterSubmit { width: 18px; }
+	/*custom zoom*/
 	#popUpZoomImage { width:600px; height:600px; margin-left: -300px; margin-top: -300px; }
+	#popUpZoomImageDesktop { display: block; }
+	#popUpZoomImageTouchScreen { display: none; }
 	#zoomCancel { width: 40px; height: 40px; margin-left: 320px; margin-top: -300px; }
 }
 /* tablet to landscape and desktop */
 @media (min-width: (@mid2Container + 48)) and (max-width: (@maxContainer + 31)) {
+	/*general page style*/
 	.contentWrapper1 { width:@mid2Container - @tileGutterSize; }
 	.contentWrapper2 { width:@mid2Container; }
+	/*header style*/
 	#rightSection { padding-left: 56px; }
 	#loginDiv { width: 200px; top: 17px; left: 56px; }
 	.loginInput { width: 176px; height: 27px; font-size: 13px; }
 	#formSubmit { width: 176px; padding: 2px 0; font-size: 13px; }
 	#forgotPassword { font-size: 12px; }
-	.socialButtons { width: 70px }
 	#headerSearchIcon { float: right; padding-top: 10px;}
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
+	/*footer*/
+	.socialButtons { width: 70px }
 	#newsletterInput { width: 170px; height: 22px; }
 	#newsletterFormInput { width: 148px; font-size: 12px; }
 	#newsletterSubmit { width: 20px; }
-	#popUpZoomImage { width:500px; height:500px; margin-left: -250px; margin-top: -250px; }
+	/*custom zoom*/
+	#popUpZoomImage { width:500px; height:500px; margin-left: -250px; margin-top: -250px;  }
+	#popUpZoomImageDesktop { display: block; }
+	#popUpZoomImageTouchScreen { display: none; }
 	#zoomCancel { width: 40px; height: 40px; margin-left: 265px; margin-top: -250px; }
 }
 /* Landscape phone to portrait tablet */
 @media  (min-width: @mid1Container) and (max-width: (@mid2Container + 47)) {
+	/*general page style*/
 	.contentWrapper1 { width:@mid1Container - @tileGutterSize; }
 	.contentWrapper2 { width:@mid1Container; }
+	/*header style*/
 	#loginDiv { width: 200px; top: 17px; left: 15px; }
 	.loginInput { width: 176px; height: 27px; font-size: 13px; }
 	#formSubmit { width: 176px; padding: 2px 0; font-size: 13px; }
 	#forgotPassword { font-size: 12px; }
-	.socialButtons { width: 80px }
 	#homeAndCollection { float: right; }
 	#headerSearchIcon { float: right; }
+	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
+	/*footer*/
+	.socialButtons { width: 80px }
 	#clearOnSmall {  clear:both; }
 	.footerHeader { font-size: 15px; }
 	.footerText { font-size: 13px; line-height: 17px; }
 	#footerPrivacy { font-size: 11px; }
-	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
 	#newsletterInput { width: 180px; height: 24px; }
 	#newsletterFormInput { width: 156px; font-size: 13px; }
 	#newsletterSubmit { width: 22px; }
-	#popUpZoomImage { width:400px; height:400px; margin-left: -200px; margin-top: -200px; }
-	#zoomCancel { width: 35px; height: 35px; margin-left: 165px; margin-top: -245px; }
+	/*custom zoom*/
+	#popUpZoomImageDesktop { display: none; }
+	/*#popUpZoomImage { width:400px; height:400px; margin-left: -200px; margin-top: -200px; }*/
+	/*#popUpZoomImageTouchScreen { display: block; }*/
+	/*#zoomCancel { width: 35px; height: 35px; margin-left: 165px; margin-top: -245px; }*/
+	#popUpDivOpaque,#popUpZoomImage,#zoomCancel { width: 0;	height: 0; }
 }
 /* portrait phone and lower */
 @media (max-width: (@mid1Container - 1)) {
+	/*general page style*/
+	#triangleBackground { background-size:65% auto; }
 	.contentWrapper1 { width:@minContainer - @tileGutterSize; }
 	.contentWrapper2 { width:@minContainer; }
-	#loginDiv { width: 300px; top: 17px; left: 15px; }
-	.loginInput { width: 274px; height: 32px; font-size: 15px; }
-	#formSubmit { width: 274px; padding: 3px 0; font-size: 15px; }
-	#forgotPassword { font-size: 14px; }
-	#mobileLoginClose { display: block; width: 24px; height: 24px; margin: 0 0 10px 260px;}
-	.socialButtons { width: 100px }
-	#homeAndCollection { float: right; }
-	#headerSearchIcon { display: none; }
-	.tileItem,.tileItem.tileItem2 { width: 320px; height: 320px; }
 	.text1 { font-size: 14px; }
 	.text4 { font-size: 16px; margin-bottom:9px; }
 	.text5 { font-size: 40px; line-height: 46px; }
 	.text6 { font-size: 17px; line-height: 19px; }
 	.bars { padding: 0 8px; }
+	/*header style*/
+	#loginDiv { width: 300px; top: 17px; left: 15px; }
+	.loginInput { width: 274px; height: 32px; font-size: 15px; }
+	#formSubmit { width: 274px; padding: 3px 0; font-size: 15px; }
+	#forgotPassword { font-size: 14px; }
+	#mobileLoginClose { display: block; width: 24px; height: 24px; margin: 0 0 10px 260px;}
+	#homeAndCollection { float: right; }
+	#headerSearchIcon { display: none; }
+	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
+	/* page content */
+	.tileItem,.tileItem.tileItem2 { width: 320px; height: 320px; }
 	#viewColllectionArrow { width: 24px; }
 	.itemInfoDiv { padding: 15px 0; top: 110px; }
 	.itemInfoIcon { margin-top: -8px; font-size: 16px; }
@@ -488,21 +573,25 @@ input:focus{
 	.itemInfoCart { right: 12px; }
 	.itemInfoHeart:hover { font-size: 20px; left: 10px; margin-top: -10px; }
 	.itemInfoCart:hover { font-size: 20px; right: 10px; margin-top: -10px; }
+	#tilePopUpText p { font-size: 26px; line-height: 28px; }
+	/*footer*/
+	.socialButtons { width: 100px }
 	#clearOnSmall {  clear:both; }
 	.footerContentPartLeft { width: 64%; }
 	.footerContentPartRight { width: 36%; }
 	.footerHeader { font-size: 16px; }
 	.footerText { font-size: 14px; line-height: 18px; }
 	#footerPrivacy { font-size: 12px; }
-	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
-	#triangleBackground { background-size:65% auto; }
 	#newsletterInput { width: 192px; height: 26px; }
 	#newsletterFormInput { width: 164px; font-size: 14px; }
 	#newsletterSubmit { width: 24px; }
+	/*custom zoom*/
 	.zoomWindowContainer {width: 300px;}
-	#popUpZoomImage { width:300px; height:300px; margin-left: -150px; margin-top: -150px; }
-	#zoomCancel { width: 35px; height: 35px; margin-left: 115px; margin-top: -190px; }
-	#tilePopUpText p { font-size: 26px; line-height: 28px; }
+	#popUpZoomImageDesktop { display: none; }
+	/*#popUpZoomImage { width:300px; height:300px; margin-left: -150px; margin-top: -150px; }*/
+	/*#popUpZoomImageTouchScreen { display: block; }*/
+	/*#zoomCancel { width: 35px; height: 35px; margin-left: 110px; margin-top: -190px; }*/
+	#popUpDivOpaque,#popUpZoomImage,#zoomCancel { width: 0;	height: 0; }
 }
 
 
