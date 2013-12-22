@@ -170,7 +170,6 @@ input:focus{
 	#loginDiv {
 		display: none;
 		position: absolute;
-		width: 150px;
 		z-index: 999;
 		#loginArrow {
 			margin-left: 12px;
@@ -181,24 +180,19 @@ input:focus{
 			padding-top: 10px;
 			.loginInput {
 				display: block;
-				width: 136px;
-				height: 21px;
 				margin: 0 auto 10px auto;
 				background-color: @loginColor2;
 				border: 1px solid @loginColor3;
 				border-radius: 0;
 				color: @loginColor3;
-				font-size: 11px;
 				padding: 1px 6px;
 			}
 			#formSubmit {
-				width: 136px;
 				margin: 0 auto;
 				display: block;
 				background-color: @loginColor4;
 				border: none;
 				color: white;
-				font-size: 12px;
 			}
 			#loginHR {
 				margin: 10px 0 12px 0;
@@ -210,7 +204,6 @@ input:focus{
 			#forgotPassword {
 				color: @loginColor3;
 				cursor: pointer;
-				font-size: 10px;
 				padding: 0 0 10px 15px;
 				margin: 0;
 			}
@@ -421,7 +414,10 @@ input:focus{
 	#middleSection { padding-top: 65px; height: 100px; }
 	#rightSection { height: 100px; padding-top: 15px}
 	#headerSearchIcon { position: absolute; right: 15px; top: 64px; }
-	#loginDiv { top: 32px; left: 15px; }
+	#loginDiv { width: 150px; top: 32px; left: 15px; }
+	.loginInput { width: 136px; height: 21px; font-size: 11px; }
+	#formSubmit { width: 136px; font-size: 12px; }
+	#forgotPassword { font-size: 10px; }
 	.socialButtons { width: 60px }
 	#newsletterInput { width: 162px; height: 20px; }
 	#newsletterFormInput { width: 140px; font-size: 11px; }
@@ -434,7 +430,10 @@ input:focus{
 	.contentWrapper1 { width:@mid2Container - @tileGutterSize; }
 	.contentWrapper2 { width:@mid2Container; }
 	#rightSection { padding-left: 56px; }
-	#loginDiv { top: 17px; left: 56px; }
+	#loginDiv { width: 200px; top: 17px; left: 56px; }
+	.loginInput { width: 176px; height: 27px; font-size: 13px; }
+	#formSubmit { width: 176px; padding: 2px 0; font-size: 13px; }
+	#forgotPassword { font-size: 12px; }
 	.socialButtons { width: 70px }
 	#headerSearchIcon { float: right; padding-top: 10px;}
 	#loginContent { border-bottom: 1px solid @loginColor3; border-left: 1px solid @loginColor3; border-right: 1px solid @loginColor3; }
@@ -448,7 +447,10 @@ input:focus{
 @media  (min-width: @mid1Container) and (max-width: (@mid2Container + 47)) {
 	.contentWrapper1 { width:@mid1Container - @tileGutterSize; }
 	.contentWrapper2 { width:@mid1Container; }
-	#loginDiv { top: 17px; left: 15px; }
+	#loginDiv { width: 200px; top: 17px; left: 15px; }
+	.loginInput { width: 176px; height: 27px; font-size: 13px; }
+	#formSubmit { width: 176px; padding: 2px 0; font-size: 13px; }
+	#forgotPassword { font-size: 12px; }
 	.socialButtons { width: 80px }
 	#homeAndCollection { float: right; }
 	#headerSearchIcon { float: right; }
@@ -467,7 +469,11 @@ input:focus{
 @media (max-width: (@mid1Container - 1)) {
 	.contentWrapper1 { width:@minContainer - @tileGutterSize; }
 	.contentWrapper2 { width:@minContainer; }
-	#loginDiv { top: 17px; left: 15px; }
+	#loginDiv { width: 300px; top: 17px; left: 15px; }
+	.loginInput { width: 274px; height: 32px; font-size: 15px; }
+	#formSubmit { width: 274px; padding: 3px 0; font-size: 15px; }
+	#forgotPassword { font-size: 14px; }
+	#mobileLoginClose { display: block; width: 20px; height: 20px; margin: 0 0 10px 264px;}
 	.socialButtons { width: 100px }
 	#homeAndCollection { float: right; }
 	#headerSearchIcon { display: none; }

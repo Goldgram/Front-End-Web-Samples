@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	/* show/hide the login div*/
-	$("#toggleLogin").click(function (){
+	$(".toggleLogin").click(function (){
 		$("#loginDiv").slideToggle("fast");
   });
   /*placeholder js becase placeholder attribute not suppored in ie8*/
