@@ -30,7 +30,7 @@ $(document).ready(function() {
     $(this).css({"background-position":xPercentage+"% "+yPercentage+"%"});
   });
 	// show and hide custom zoom
-  $(".showHideideCustomZoom").click(function (){
+  $(".showHideideCustomZoom ").click(function (){
 		$("#popUpDivOpaque,#popUpZoomImage,#zoomCancel").toggle();
   });
   // show large image title
