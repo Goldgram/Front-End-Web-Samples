@@ -30,42 +30,42 @@ $(document).ready(function() {
     $(this).css({"background-position":xPercentage+"% "+yPercentage+"%"});
   });
   /* mobile zoom, TODO: currently working on touch screen functionality */
-  // $(".popUpZoomArrow").click(function (){
-  //   var xAdd,yAdd,xPercentage,yPercentage;
-  //   switch($(this).attr("id")){
-  //     case "popUpZoomRight":
-  //     xAdd = 20;
-  //     yAdd = 0;
-  //     break;
-  //     case "popUpZoomDown":
-  //     xAdd = 0;
-  //     yAdd = 20;
-  //     break;
-  //     case "popUpZoomLeft":
-  //     xAdd = -20;
-  //     yAdd = 0;
-  //     break;
-  //     case "popUpZoomUp":
-  //     xAdd = 0;
-  //     yAdd = -20;
-  //   }
-  //   var backgroundPos = $("#popUpZoomImageTouchScreen").css("background-position").split(" ");
-  //   if (backgroundPos[0].indexOf("px") !== -1) {
-  //     xPercentage = parseInt(((backgroundPos[0].slice(0,-2)*100)/$("#popUpZoomImageTouchScreen").width()),10)+xAdd;
-  //   } else {
-  //     xPercentage = parseInt(backgroundPos[0].slice(0,-1),10)+xAdd;
-  //   }
-  //   if (backgroundPos[1].indexOf("px") !== -1) {
-  //     yPercentage = parseInt(((backgroundPos[1].slice(0,-2)*100)/$("#popUpZoomImageTouchScreen").height()),10)+yAdd;
-  //   } else {
-  //     yPercentage = parseInt(backgroundPos[1].slice(0,-1),10)+yAdd;
-  //   }
-  //   $("#popUpZoomImageTouchScreen").css({"background-position":xPercentage+"% "+yPercentage+"%"});
-  //   (xPercentage<=0) ? $("#popUpZoomLeft").hide() : $("#popUpZoomLeft").show();
-  //   (xPercentage>=100) ? $("#popUpZoomRight").hide() : $("#popUpZoomRight").show();
-  //   (yPercentage<=0) ? $("#popUpZoomUp").hide() : $("#popUpZoomUp").show();
-  //   (yPercentage>=100) ? $("#popUpZoomDown").hide() : $("#popUpZoomDown").show();
-  // });
+  $(".popUpZoomArrow").click(function (){
+    var xAdd,yAdd,xPercentage,yPercentage;
+    switch($(this).attr("id")){
+      case "popUpZoomRight":
+      xAdd = 25;
+      yAdd = 0;
+      break;
+      case "popUpZoomDown":
+      xAdd = 0;
+      yAdd = 25;
+      break;
+      case "popUpZoomLeft":
+      xAdd = -25;
+      yAdd = 0;
+      break;
+      case "popUpZoomUp":
+      xAdd = 0;
+      yAdd = -25;
+    }
+    var backgroundPos = $("#popUpZoomImageTouchScreen").css("background-position").split(" ");
+    if (backgroundPos[0].indexOf("px") !== -1) {
+      xPercentage = parseInt(((backgroundPos[0].slice(0,-2)*100)/$("#popUpZoomImageTouchScreen").width()),10)+xAdd;
+    } else {
+      xPercentage = parseInt(backgroundPos[0].slice(0,-1),10)+xAdd;
+    }
+    if (backgroundPos[1].indexOf("px") !== -1) {
+      yPercentage = parseInt(((backgroundPos[1].slice(0,-2)*100)/$("#popUpZoomImageTouchScreen").height()),10)+yAdd;
+    } else {
+      yPercentage = parseInt(backgroundPos[1].slice(0,-1),10)+yAdd;
+    }
+    $("#popUpZoomImageTouchScreen").css({"background-position":xPercentage+"% "+yPercentage+"%"});
+    (xPercentage<=0) ? $("#popUpZoomLeft").hide() : $("#popUpZoomLeft").show();
+    (xPercentage>=100) ? $("#popUpZoomRight").hide() : $("#popUpZoomRight").show();
+    (yPercentage<=0) ? $("#popUpZoomUp").hide() : $("#popUpZoomUp").show();
+    (yPercentage>=100) ? $("#popUpZoomDown").hide() : $("#popUpZoomDown").show();
+  });
 	// show and hide custom zoom
   $(".showHideideCustomZoom").click(function (){
 		$("#popUpDivOpaque,#popUpZoomImage,#zoomCancel").toggle();
