@@ -1,0 +1,6 @@
+{
+  "v100":{ "name":"Loki Laufeyson", "jobTitle":"God of Mischief", "companyName":"Asguard", "images":{"bannerImage":{"src":"resources/images/villain-image-v000.jpg", "alt":"loki laufeyson image"}} },
+  "v101":{ "name":"Victor von Doom", "jobTitle":"King of Latveria", "companyName":"Latveria", "images":{"bannerImage":{"src":"resources/images/villain-image-v001.jpg", "alt":"victor von doom image"}} },
+  "v102":{ "name":"Max Eisenhardt", "jobTitle":"Magneto", "companyName":"BrotherHood of Mutants", "images":{"bannerImage":{"src":"resources/images/villain-image-v002.jpg", "alt":"max eisenhardt image"}} },
+  "v103":{ "name":"Otto Octavius", "jobTitle":"Doctor Octopus", "companyName":"Sinister Six", "images":{"bannerImage":{"src":"resources/images/villain-image-v003.jpg", "alt":"otto octavius image"}} }
+}

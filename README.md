@@ -1,5 +1,31 @@
-Front-End-Web-Samples
+Interview projects
 ==========================================================================
+
+
+
+===== Blue Interview Solution =====
+This Solution is for the challenge of listing out a JSON file and creating a pop functionality with additional data.
+
+-- Project Requirements --
+Task 1:
+- Create a web page which displays a list of user names.
+- The list is read from a JSON file. You’ll have to design the JSON format yourself.
+
+Task 2:
+- Create a reusable JavaScript control which will display a business card for a user in the list
+- The business card will show at least the users name, job title, email address, company name and phone number
+- The business card will pop-up
+- Add one extra feature based on what you think is important
+
+-- Solution --
+Requirements fulfilled: 
+- The user list is pulled in from a json file, and rendered to the page
+- A business card pop up with the selected user's data (the hero list and card).
+
+Additional feature:
+- We can pass in json (data) and html (presentation) into the javascript class, this matches the json keys to the element classes in the html, this creates a solution where you can mix and match the data and presentation to display the user needs (the villain list and cards).
+
+
 
 ===== ZG Interview Project =====
 This project is based on a snapshot design as part of a front-end job interview process. It is a one-page site with minimal complexity. 
