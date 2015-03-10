@@ -4,9 +4,11 @@ Interview projects
 
 
 ===== Blue Interview Solution =====
+
 This Solution is for the challenge of listing out a JSON file and creating a pop functionality with additional data.
 
 -- Project Requirements --
+
 Task 1:
 - Create a web page which displays a list of user names.
 - The list is read from a JSON file. You’ll have to design the JSON format yourself.
@@ -28,9 +30,11 @@ Additional feature:
 
 
 ===== ZG Interview Project =====
+
 This project is based on a snapshot design as part of a front-end job interview process. It is a one-page site with minimal complexity. 
 
 -- Project Requirements --
+
 Layout with Bootstrap 3:
 - Used bootstrap 3 CDN
 - Sections of the page use the grid system to layout the content as needed.
