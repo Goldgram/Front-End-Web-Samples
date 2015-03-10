@@ -20,6 +20,7 @@ Task 2:
 - Add one extra feature based on what you think is important
 
 -- Solution --
+
 Requirements fulfilled: 
 - The user list is pulled in from a json file, and rendered to the page
 - A business card pop up with the selected user's data (the hero list and card).
