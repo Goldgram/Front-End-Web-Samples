@@ -37,6 +37,8 @@ Additional feature:
 
 This project is based on a snapshot design as part of a front-end job interview process. It is a one-page site with minimal complexity. 
 
+Live example: [https://willbrennan.tech/responsive-example/](https://willbrennan.tech/responsive-example/)
+
 **Project Requirements & Solutions**
 
 Layout with Bootstrap 3:
